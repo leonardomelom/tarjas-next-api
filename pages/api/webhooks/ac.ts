@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
+const { active } = require('../../../controller/activeController')
 
 export default async function handler(
   req: NextApiRequest,
@@ -6,7 +7,7 @@ export default async function handler(
 ) {
   const { method } = req
 
-  if (method === 'GET') {
-    return res.status(200).json('hello world')
+  if (method === 'POST') {
+    return res.status(200).json(active)
   }
 }

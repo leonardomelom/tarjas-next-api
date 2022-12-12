@@ -20,8 +20,7 @@ export default async function handler(
     } catch (error) {
       return res.status(500).json({ message: 'Internal Server Error' })
     }
-  }
-  if (method === 'PUT') {
+  }else if (method === 'PUT') {
     try {
       await fs.writeFile(
         path.join(process.cwd(), 'promilitares.json'),
