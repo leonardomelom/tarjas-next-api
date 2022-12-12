@@ -20,7 +20,8 @@ export default async function handler(
     } catch (error) {
       res.status(500).json({ message: 'Internal Server Error' })
     }
-  } else if (method === 'PUT') {
+  }
+  if (method === 'PUT') {
     try {
       await fs.writeFile(
         path.join(process.cwd(), 'proenem.json'),
