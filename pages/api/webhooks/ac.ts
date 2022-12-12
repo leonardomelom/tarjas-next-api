@@ -7,6 +7,6 @@ export default async function handler(
   const { method } = req
 
   if (method === 'GET') {
-    return 'hello world'
+    return res.status(200).json('hello world')
   }
 }
